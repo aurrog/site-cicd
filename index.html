@@ -1,12 +1,526 @@
-<!– – index.html – – >
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF– 8">
-<title>Мой сайт</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ТурбоЛинк — Интернет на максимальной скорости</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Привет, GitHub Actions!</h1>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="logo">
+      <span class="icon">⚡</span>
+      <span>Турбо</span><span>Линк</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about">О компании</a></li>
+      <li><a href="#pricing">Тарифы</a></li>
+      <li><a href="#promo">Акции</a></li>
+      <li><a href="#bonus">Бонусы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+      <li><a href="#contacts" class="nav-cta">Подключить</a></li>
+    </ul>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-layout">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>№1 по скорости в Санкт-Петербурге</span>
+    </div>
+    <h1>Ваш город.<br>Ваша жизнь.<br><span class="gradient-text">На полной скорости.</span></h1>
+    <p>Подключаем домашних и корпоративных абонентов к оптической сети с гарантированной скоростью до 1 Гбит/с. Стабильно. Быстро. Без сюрпризов в счёте.</p>
+    <div class="hero-buttons">
+      <a href="#contacts" class="btn btn-primary">⚡ Подключить за 1 день</a>
+      <a href="#pricing" class="btn btn-outline">Посмотреть тарифы</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">12+</div>
+        <div class="label">лет на рынке</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">85K</div>
+        <div class="label">абонентов</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">99.9%</div>
+        <div class="label">аптайм сети</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="network-visual" aria-label="Оптическая сеть со скоростью до 1 Гбит/с">
+    <div class="network-head"><span>ТурбоЛинк / Оптическая сеть</span><span class="network-status">Онлайн</span></div>
+    <svg class="network-map" viewBox="0 0 440 350" role="img" aria-labelledby="network-title">
+      <title id="network-title">Домашние устройства подключены к оптической сети</title>
+      <defs>
+        <radialGradient id="network-glow"><stop stop-color="#5ae4d0" stop-opacity=".16"/><stop offset="1" stop-color="#5ae4d0" stop-opacity="0"/></radialGradient>
+        <pattern id="network-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#adbdca" stroke-opacity=".07"/></pattern>
+      </defs>
+      <rect width="440" height="350" fill="url(#network-grid)"/>
+      <circle cx="220" cy="175" r="155" fill="url(#network-glow)"/>
+      <g fill="none" stroke="#5ae4d0">
+        <circle cx="220" cy="175" r="128" opacity=".15"/>
+        <circle cx="220" cy="175" r="93" opacity=".2" stroke-dasharray="3 8"/>
+        <path d="M220 175L70 83M220 175L366 91M220 175L84 278M220 175L352 277" opacity=".6"/>
+      </g>
+      <g fill="#132a36" stroke="#5ae4d0" stroke-opacity=".5">
+        <rect x="37" y="50" width="66" height="66" rx="18"/>
+        <rect x="333" y="58" width="66" height="66" rx="18"/>
+        <rect x="51" y="245" width="66" height="66" rx="18"/>
+        <rect x="319" y="244" width="66" height="66" rx="18"/>
+      </g>
+      <g fill="none" stroke="#adbdca" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M55 84L70 71L85 84M59 82V97H81V82M67 97V87H73V97"/>
+        <rect x="352" y="75" width="28" height="20" rx="3"/><path d="M366 95V102M358 102H374"/>
+        <rect x="76" y="260" width="16" height="29" rx="3"/><path d="M82 284H86"/>
+        <path d="M339 279C338 267 342 267 347 270H357C362 267 366 267 365 279L364 285C363 291 358 284 356 283H348C346 284 341 291 340 285ZM345 276H351M348 273V279"/><circle cx="358" cy="276" r="1"/>
+      </g>
+      <circle cx="220" cy="175" r="69" fill="#142f3a" stroke="#5ae4d0" stroke-width="1.5"/>
+      <g fill="#f4f8fa" text-anchor="middle" font-family="system-ui, sans-serif">
+        <text x="220" y="171" font-size="42" font-weight="750" letter-spacing="-2">1 Гбит</text>
+        <text x="220" y="197" font-size="10" letter-spacing="2" fill="#5ae4d0">В СЕКУНДУ · ДО</text>
+      </g>
+      <g fill="#5ae4d0"><circle cx="145" cy="129" r="3"/><circle cx="293" cy="133" r="3"/><circle cx="152" cy="227" r="3"/><circle cx="286" cy="226" r="3"/></g>
+    </svg>
+    <div class="network-foot"><span>Одна сеть. Все устройства.</span><strong>Дома · На работе · В игре</strong></div>
+  </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section dark-bg" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-title">
+          <div class="label">О компании</div>
+          <h2>От первого кабеля — к городу оптики</h2>
+        </div>
+        <p>«ТурбоЛинк» появился в 2013 году как небольшой интернет-провайдер в одном из районов Петербурга. Основатели — команда инженеров связи — поставили перед собой простую цель: дать жителям честную скорость без тарифных ловушек.</p>
+        <p>За двенадцать лет мы проложили более 4000 км оптического кабеля, охватили все районы города и ближайшее пригородное кольцо, а наша сеть стала одной из самых стабильных в регионе.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="ico">🌐</div>
+            <div>
+              <h4>Своя оптическая магистраль</h4>
+              <p>Не зависим от сторонних каналов — вся сеть построена и обслуживается нашими специалистами.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="ico">🛠️</div>
+            <div>
+              <h4>Поддержка 24/7</h4>
+              <p>Живые операторы, а не чат-боты. Среднее время ответа — 40 секунд.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="ico">💸</div>
+            <div>
+              <h4>Прозрачные счета</h4>
+              <p>Цена тарифа = цена в счёте. Никаких скрытых платежей и «звёздочек» мелким шрифтом.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-card">
+          <div class="big-num">4000+</div>
+          <div class="big-label">километров оптики проложено</div>
+          <div class="about-timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2013</div>
+              <div class="timeline-text">Запуск компании, первые 200 абонентов</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2017</div>
+              <div class="timeline-text">Выход в пригороды, 20 000 абонентов</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2021</div>
+              <div class="timeline-text">GPON-сеть, скорость до 1 Гбит/с</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2025</div>
+              <div class="timeline-text">85 000 абонентов, 5G-готовность</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="section dark2-bg" id="pricing">
+  <div class="container">
+    <div class="section-title">
+      <div class="label">Тарифы</div>
+      <h2>Выберите свою скорость</h2>
+      <p>Три тарифа под разные задачи — от просмотра сериалов до геймерского стрима. Подключение и оборудование — бесплатно.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Tariff 1 -->
+      <div class="tariff-card">
+        <img class="tariff-photo" src="assets/photos/family.webp" alt="Семья смотрит видео на планшете дома"
+             width="960" height="640" loading="lazy" decoding="async">
+        <div class="tariff-name">Старт</div>
+        <div class="tariff-desc">Для дома и повседневных задач</div>
+        <div class="tariff-price">
+          <span class="amount">399</span>
+          <span class="unit">₽/мес</span>
+        </div>
+        <ul class="tariff-features">
+          <li>Скорость до 100 Мбит/с</li>
+          <li>Wi-Fi роутер в аренду</li>
+          <li>Антивирус на 1 устройство</li>
+          <li>Поддержка в чате и по телефону</li>
+        </ul>
+        <button type="button" class="tariff-btn secondary" data-tariff="start">Выбрать тариф</button>
+      </div>
+
+      <!-- Tariff 2 -->
+      <div class="tariff-card featured">
+        <img class="tariff-photo" src="assets/photos/remote-work.webp" alt="Девушка работает за ноутбуком дома"
+             width="960" height="640" loading="lazy" decoding="async">
+        <div class="tariff-name">Турбо</div>
+        <div class="tariff-desc">Оптимальный для всей семьи</div>
+        <div class="tariff-price">
+          <span class="amount">599</span>
+          <span class="unit">₽/мес</span>
+        </div>
+        <ul class="tariff-features">
+          <li>Скорость до 500 Мбит/с</li>
+          <li>Wi-Fi роутер 5 ГГц — в подарок</li>
+          <li>Антивирус на 5 устройств</li>
+          <li>Онлайн-кинотеатр на 6 месяцев</li>
+          <li>Приоритетная поддержка</li>
+        </ul>
+        <button type="button" class="tariff-btn primary" data-tariff="turbo">Выбрать тариф</button>
+      </div>
+
+      <!-- Tariff 3 -->
+      <div class="tariff-card">
+        <img class="tariff-photo" src="assets/photos/gaming.webp" alt="Игрок за компьютером с гоночной игрой на экране"
+             width="960" height="640" loading="lazy" decoding="async">
+        <div class="tariff-name">Макс</div>
+        <div class="tariff-desc">Для геймеров и профи</div>
+        <div class="tariff-price">
+          <span class="amount">899</span>
+          <span class="unit">₽/мес</span>
+        </div>
+        <ul class="tariff-features">
+          <li>Скорость до 1 Гбит/с</li>
+          <li>Игровой Wi-Fi роутер — в подарок</li>
+          <li>Статичный IP-адрес</li>
+          <li>Антивирус + VPN на 10 устройств</li>
+          <li>Пинг от 5 мс до игровых серверов</li>
+        </ul>
+        <button type="button" class="tariff-btn secondary" data-tariff="max">Выбрать тариф</button>
+      </div>
+    </div>
+
+    <!-- Advantages -->
+    <div class="section-title">
+      <div class="label">Почему мы</div>
+      <h2>Наши преимущества</h2>
+    </div>
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <div class="ico">⚡</div>
+        <h4>Скорость</h4>
+        <p>Симметричный канал: upload = download. Без «заверений на бумаге».</p>
+      </div>
+      <div class="advantage-card">
+        <div class="ico">📡</div>
+        <h4>Стабильность</h4>
+        <p>Резервирование магистралей — обрыв на одном участке не рвёт связь.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="ico">🕐</div>
+        <h4>Быстрый монтаж</h4>
+        <p>Подключение за 1 день с момента заявки в будние дни.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="ico">🔒</div>
+        <h4>Безопасность</h4>
+        <p>Защита от DDoS, родительский контроль, отдельная сеть для гостей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOTIONS ===== -->
+<section class="section dark-bg" id="promo">
+  <div class="container">
+    <div class="section-title">
+      <div class="label">Акции</div>
+      <h2>Действующие предложения</h2>
+      <p>Не забудьте упомянуть акцию при оформлении заявки — скидка применяется автоматически.</p>
+    </div>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <span class="promo-tag">Новым абонентам</span>
+        <h3>Первый месяц — бесплатно</h3>
+        <p>Подключите любой тариф до конца октября — и платите за связь только со второго месяца. Без условий и скрытых обязательств.</p>
+        <div class="deadline">⏳ Действует до: <strong>31 октября 2026</strong></div>
+      </div>
+      <div class="promo-card">
+        <span class="promo-tag">Пенсионерам</span>
+        <h3>Скидка 20% навсегда</h3>
+        <p>Предъявите пенсионное удостоверение при подключении — и получайте скидку 20% на любой тариф на весь срок обслуживания.</p>
+        <div class="deadline">⏳ Бессрочно</div>
+      </div>
+      <div class="promo-card">
+        <span class="promo-tag">Приведи друга</span>
+        <h3>2 месяца в подарок</h3>
+        <p>Расскажите о нас — за каждого приведённого абонента вы получаете 2 месяца обслуживания бесплатно. Количество друзей не ограничено.</p>
+        <div class="deadline">⏳ Действует до: <strong>31 декабря 2026</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BONUS PROGRAM ===== -->
+<section class="section dark2-bg" id="bonus">
+  <div class="container">
+    <div class="section-title">
+      <div class="label">Бонусная программа</div>
+      <h2>Программа лояльности «ТурбоБаллы»</h2>
+      <p>Чем дольше вы с нами — тем больше привилегий. Баллы начисляются за каждый месяц оплаты и обмениваются на реальные плюшки.</p>
+    </div>
+    <div class="bonus-wrap">
+      <div class="bonus-visual">
+        <div class="bonus-circle">
+          <div class="star">⭐</div>
+          <div class="lvl">Lv. 4</div>
+          <div class="lvl-text">Платиновый абонент</div>
+        </div>
+        <div class="bonus-levels">
+          <div class="bonus-level-chip">Бронза <span class="pts">0–500 баллов</span></div>
+          <div class="bonus-level-chip">Серебро <span class="pts">500–1500</span></div>
+          <div class="bonus-level-chip">Золото <span class="pts">1500–3000</span></div>
+          <div class="bonus-level-chip">Платина <span class="pts">3000–6000</span></div>
+          <div class="bonus-level-chip">Бриллиант <span class="pts">6000+</span></div>
+        </div>
+      </div>
+      <div class="bonus-rules">
+        <div class="bonus-rule">
+          <div class="step">1</div>
+          <div>
+            <h4>Начисление баллов</h4>
+            <p>За каждый месяц оплаты тарифа вы получаете 50–100 баллов (зависит от уровня). Бонусные баллы за акции и рекомендации начисляются отдельно.</p>
+          </div>
+        </div>
+        <div class="bonus-rule">
+          <div class="step">2</div>
+          <div>
+            <h4>Повышение уровня</h4>
+            <p>Накопленные баллы суммируются за весь период. При достижении порога уровень повышается автоматически — вместе с новыми привилегиями.</p>
+          </div>
+        </div>
+        <div class="bonus-rule">
+          <div class="step">3</div>
+          <div>
+            <h4>Обмен баллов</h4>
+            <p>Баллы можно потратить на: скидку до 50% на следующий месяц, бесплатный апгрейд тарифа, продление онлайн-кинотеатра, оплату оборудования.</p>
+          </div>
+        </div>
+        <div class="bonus-rule">
+          <div class="step">4</div>
+          <div>
+            <h4>Привилегии по уровням</h4>
+            <p>Серебро — приоритетная поддержка. Золото — бесплатный статичный IP. Платина — персональный менеджер. Бриллиант — VIP-тариф со скидкой 30% навсегда.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTS ===== -->
+<section class="section dark-bg" id="contacts">
+  <div class="container">
+    <div class="section-title">
+      <div class="label">Контакты</div>
+      <h2>Оформить заявку — просто</h2>
+      <p>Выберите тариф и проверьте, как выглядит оформление заявки на подключение.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="ico">📞</div>
+          <div>
+            <h4>Телефон</h4>
+            <p><a href="tel:+78121234567" class="contact-link-primary">+7 (812) 123-45-67</a> — круглосуточно</p>
+            <p><a href="tel:88001234567">8 (800) 123-45-67</a> — бесплатно по России</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:hello@turbolink.ru" class="contact-link-primary">hello@turbolink.ru</a></p>
+            <p><a href="mailto:support@turbolink.ru">support@turbolink.ru</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico">📍</div>
+          <div>
+            <h4>Офис</h4>
+            <p>Санкт-Петербург, Невский проспект, 100, офис 312</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ico">🕐</div>
+          <div class="contact-hours-content">
+            <h4>Часы работы</h4>
+            <div class="contact-hours">
+              <div class="row"><span>Техподдержка по телефону</span><span>круглосуточно</span></div>
+              <div class="row"><span>Офис продаж</span><span>Пн–Пт 9:00–21:00</span></div>
+              <div class="row"><span>Офис продаж</span><span>Сб–Вс 10:00–18:00</span></div>
+              <div class="row"><span>Выезд монтажника</span><span>Пн–Сб 8:00–20:00</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="return submitForm(event)">
+        <h3>Заявка на подключение</h3>
+        <p class="sub">Демонстрационная форма. Для проверки используйте вымышленные данные.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" placeholder="Иван" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Адрес подключения</label>
+          <input type="text" id="address" placeholder="Улица, дом, квартира" required>
+        </div>
+        <div class="form-group">
+          <label for="tariff">Желаемый тариф</label>
+          <select id="tariff">
+            <option value="start">Старт — 100 Мбит/с — 399 ₽/мес</option>
+            <option value="turbo" selected>Турбо — 500 Мбит/с — 599 ₽/мес</option>
+            <option value="max">Макс — 1 Гбит/с — 899 ₽/мес</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comment">Комментарий (необязательно)</label>
+          <textarea id="comment" placeholder="Удобное время для звонка, особенности подключения и т.д."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Проверить заявку</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-col footer-brand">
+        <a href="#hero" class="logo">
+          <span class="icon">⚡</span>
+          <span>Турбо</span><span>Линк</span>
+        </a>
+        <p>Интернет-провайдер полного цикла. Оптика, сервис, честные тарифы — с 2013 года.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Тарифы</h5>
+        <ul>
+          <li><a href="#pricing">Старт</a></li>
+          <li><a href="#pricing">Турбо</a></li>
+          <li><a href="#pricing">Макс</a></li>
+          <li><a href="#pricing">Корпоративным клиентам</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Компания</h5>
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#promo">Акции</a></li>
+          <li><a href="#bonus">Бонусная программа</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Поддержка</h5>
+        <ul>
+          <li><a href="tel:+78121234567">+7 (812) 123-45-67</a></li>
+          <li><a href="mailto:support@turbolink.ru">support@turbolink.ru</a></li>
+          <li><a href="#">Проверка скорости</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2013–2026 ТурбоЛинк. Все права защищены. Лицензия № 128934 Роскомнадзор.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 40) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+// Burger menu
+var burger = document.getElementById('burger');
+var navMenu = document.getElementById('navMenu');
+burger.addEventListener('click', function() {
+  burger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+navMenu.querySelectorAll('a').forEach(function(link) {
+  link.addEventListener('click', function() {
+    burger.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
+});
+
+// Pass the selected tariff to the demo form.
+const tariffSelect = document.getElementById('tariff');
+const formStatus = document.getElementById('form-status');
+tariffSelect.form.addEventListener('input', function() {
+  formStatus.textContent = '';
+});
+document.querySelectorAll('.tariff-btn[data-tariff]').forEach(function(button) {
+  button.addEventListener('click', function() {
+    tariffSelect.value = button.dataset.tariff;
+    formStatus.textContent = '';
+    document.getElementById('contacts').scrollIntoView();
+    document.getElementById('name').focus({ preventScroll: true });
+  });
+});
+
+// Demo form
+function submitForm(e) {
+  e.preventDefault();
+  formStatus.textContent = 'Поля проверены. Отправка данных отключена.';
+  return false;
+}
+</script>
+
 </body>
 </html>
